@@ -1,9 +1,15 @@
 .header {
-  grid-area: header;
+  position: sticky;
+  width: 100%;
+  height: 10%;
+  top: 0;
+  left: 0;
+  z-index: 10;
   background-color: $header-background-color;
   &__container {
     width: 100%;
     height: 100%;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: 50% 50%;
   }
@@ -33,7 +39,7 @@
 }
 
 @media (min-width: 1152px) {
-  .header__conainer {
+  .header__container {
     max-width: 1152px;
   }
 }

@@ -1,0 +1,57 @@
+.footer {
+  width: 100%;
+  background-color: $header-background-color;
+  padding: 2rem;
+  color: #fff;
+  &__top {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  &__logo-area {
+    place-self: center start;
+  }
+  &__contacts-area {
+    display: grid;
+    grid-template-areas:
+      "links contact"
+      "links community";
+    &__links {
+      grid-area: links;
+      display: flex;
+      flex-flow: column nowrap;
+    }
+    &__conact {
+      grid-area: contact;
+    }
+    &__community {
+      grid-area: community;
+    }
+  }
+
+  &__bottom {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: #fff;
+    font-weight: 300;
+    font-size: 1rem;
+  }
+  &__docs {
+    place-self: start end;
+
+    &_link {
+      margin-left: 2rem;
+    }
+  }
+}
+.footer__contacts-area__contact_link:hover,
+.footer__docs_link:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 1152px) {
+  .footer__container {
+    max-width: 1152px;
+  }
+}
